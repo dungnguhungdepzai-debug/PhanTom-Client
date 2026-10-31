@@ -16,6 +16,7 @@ jobs:
         run: |
           unzip phantom-client-fixed.zip
           cp -r phantom-client/* .
+          sed -i 's/gradle-8.10/gradle-8.14/g' gradle/wrapper/gradle-wrapper.properties
 
       - name: Setup Java 25
         uses: actions/setup-java@v4
